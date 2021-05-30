@@ -1,0 +1,61 @@
+/* Paleta de Colores*/
+/*Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;*/
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*--------------FOOTER--------------*/
+footer{
+    background-color:white;
+    width: 100vw;
+}
+
+footer article{
+    text-align: center;
+    line-height: 16px;
+    padding: 5px;
+}
+
+.icono{
+    color:#1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+footer h2 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 0 auto;
+}
+
+/*----------MEDIA QUERIES------------*/
+/*-----Mobile-------*/
+/* Mobile sera cualquier dispositivo con ancho hasta 360 px*/
+/*Todas las reglas de estilo de arriba corresponden a Mobile porque esta pensado en Mobile First*/
+
+/*-----Desktop--------*/
+@media (min-width: 767px) {
+    /*--------FOOTER--------*/
+    .flex-footer{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .footer-item{
+        width: 30vw;
+    }
+
+    .icono:hover{
+        color: #39b54a;
+    }
+}

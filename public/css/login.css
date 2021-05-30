@@ -1,0 +1,76 @@
+/*--- Estilos Generales del Formulario ---*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:#ebebeb;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+form{
+    width: 60vw;
+    background-color: #ebebeb;
+    border-radius: 1%;
+    margin: 50px auto;
+    padding: 20px auto;
+}
+
+legend{
+    font-weight: bold;
+    font-size: 24px;
+    color: #03264C;
+}
+
+.formulario-de-ingreso{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: #ebebeb 2px solid;
+}
+
+/*--- Estilos de las Preguntas del formulario ---*/
+.preguntas-formulario{
+    font-size: 16px;
+    color: #03264C;
+    padding-bottom: 5px;
+    padding-top: 5px
+}
+
+fieldset label {
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+fieldset label input {
+    width: 90%;
+    margin: auto;
+    border: none;
+    border-radius: 5%;
+    padding: 8px 5px;
+    font-size: 12px;
+}
+
+/*-----Estilos de los Botones -----*/
+fieldset button {
+    margin: 5px auto;
+    width: 100px;
+    padding: 5px;
+    background-color: #1259c3;
+    color: white;
+    border-radius: 8%;
+    border: none;
+}
+
+button:hover{
+    background-color: #0022AA;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

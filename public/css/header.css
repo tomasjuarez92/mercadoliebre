@@ -1,0 +1,173 @@
+/* Paleta de Colores*/
+/*Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;*/
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*-----------------------HEADER-----------------------*/
+header{
+    background-color: #EAC926;
+    width: 100vw;
+}
+
+.main-header-top-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 45%;
+}
+
+.searchbar{
+    font-size: 10px;
+    color: #666;
+    width: 45%;
+    background-color: white;
+    border: 1px solid #ebebeb;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 5%;
+    max-height: 12px;
+    line-height: 12px;
+}
+
+.form-busqueda{
+    border: none;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+
+.navbar{
+    display: none;
+}
+
+.loginbar{
+    display: none;
+}
+
+.burger-menu{
+    display: block;
+    background-color: #1259c3;
+    color: #ebebeb;
+    font-size: 18px;
+    text-align: center;
+    width: 24px;
+    border-radius: 5%;
+    padding: 2px;
+    margin: 10px auto;
+}
+
+.banner{
+    width: 100vw;
+}
+
+.compraCuotas{
+    font-size:12px;
+    text-align: center;
+}
+
+/*----------MEDIA QUERIES------------*/
+/*-----Mobile-------*/
+/* Mobile sera cualquier dispositivo con ancho hasta 360 px*/
+/*Todas las reglas de estilo de arriba corresponden a Mobile porque esta pensado en Mobile First*/
+
+/*-----Tablets-------*/
+@media (min-width: 361px) {
+    /*--------HEADER--------*/
+    .main-header-top-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo{
+        max-width: 30%;
+    }
+
+    .searchbar{
+        max-width: 30%;
+        font-size: 10px;
+        overflow: hidden;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        height: 12px;
+        line-height: 12px;
+
+    }
+
+    .compraCuotas{
+        font-size:10px;
+        max-width: 30%;
+        text-align: right;
+        
+    }
+
+    .main-header-bottom-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        font-size: 7px;
+    }
+
+    .loginbar{
+        display: flex;
+        flex-direction: row;
+        font-size: 7px;
+    }
+
+    header ul{
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 8px;
+    }
+
+    header li{
+        margin: 0 3px;
+    }
+
+    header a{
+        text-decoration: none;
+        color: #222222;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+}
+
+/*-----Desktop--------*/
+@media (min-width: 767px) {
+    .main-header-top-bar, .main-header-bottom-bar {
+        max-width: 760px;
+    }
+
+    .navbar, .loginbar {
+        font-size: 12px;
+        margin: 0 20px;
+        padding:0 20px;
+    }
+}

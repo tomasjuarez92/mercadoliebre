@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro de Usuario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/registro.css">
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        
+        <!--Genero una primera seccion dentro del header-->
+        <nav class="main-header-top-bar">
+            <!--Genero el Logo-->
+            <img src="img/logo-mercado-liebre.svg" alt="logo" class="logo">
+
+            <!--Genero search bar o barra de busqueda-->
+            <form action="/barra-busqueda" method="GET" class="searchbar">
+                    <input type="text" placeholder="Buscar productos, marcas" class="form-busqueda" > 
+                    <a href="/busqueda-productos"><i class="fas fa-search lupa"></i></a>
+            </form>
+            
+            <!--Genero leyenda de compra con TdC-->
+            <p class='compraCuotas'><i class="fas fa-hand-holding-usd"></i> Compra en cuotas y sin tarjeta de credito</p>
+        </nav>
+
+        <!--Genero una segunda seccion dentro del header con las barras de navegacion-->
+        <nav class="main-header-bottom-bar">
+            <!--Genero las barras de navegacion-->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Tiendas Oficiales</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </nav>
+            
+            <!--Genero login bar o barra de inicio-->
+            <nav class="loginbar">
+                <ul>
+                    <li><a href="/register">Crea tu Cuenta </a><i class="far fa-id-card"></i></li>
+                    <li><a href="/login">Usuario </a><i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href="#">Mis Compras </a><i class="fas fa-shopping-basket"></i></li>
+                </ul>
+            </nav>
+
+            <nav class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </nav>
+
+        </nav>
+
+        <!--Genero banner-->
+        <img src="img/img-home-banner.jpg" alt="banner" class="banner">
+        
+    </header>
+    
+    <main>
+        <!--Genero formulario de registro-->
+        <form action="/" method="GET">
+            <fieldset class="formulario-de-registro">
+                <legend> Datos de Usuario </legend>
+
+                <label>
+                    <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="2" required></input>
+                </label>
+            
+                <label> 
+                    <span>
+                    <input type="text" name="username" placeholder="Nombre de Usuario" 
+                    class="feedback" minlength="8" maxlength="14" required
+                    pattern="[a-z]{1,15}" title="El username debe tener de 8 a 14 caracteres"></input>
+                    </span>
+                </label>
+
+
+                <label class="preguntas-formulario">Fecha de Nacimiento
+                        <input type="date" name="fecha-nacimiento" required></input>
+                </label>
+
+                <label> 
+                    <input type="text" name="domicilio" placeholder="Domicilio" required></input>
+                </label>
+
+                <label class="preguntas-formulario">Perfil de Usuario: </label>
+                <span class="peril-usuario">
+                    <div class="opciones-checkbox">
+                        <input type="radio" name="perfil" value="comprador" required>
+                        <label>Comprador</label>
+                    </div>
+                    <div class="opciones-checkbox">
+                        <input type="radio" name="perfil" value="vendedor">
+                        <label>Vendedor</label>
+                    </div>
+                </span>
+            
+                <!--No pongo la checklist como required porque no considero que deba ser
+                un campo mandatorio en el formulario de registro-->
+                <label class="preguntas-formulario">Categorias de Interes: </label>
+                <span class="categorias-de-interes">
+                    <div class="opciones-intereses">   
+                        <input type="checkbox" name="intereses" value="electro">
+                        <label>Electro</label>
+                    </div> 
+                    <div class="opciones-intereses">   
+                        <input type="checkbox" name="intereses" value="moda">
+                        <label>Moda</label>
+                    </div> 
+                    <div class="opciones-intereses">   
+                        <input type="checkbox" name="intereses" value="hogar">
+                        <label>Hogar</label>
+                    </div> 
+                    <div class="opciones-intereses">   
+                        <input type="checkbox" name="intereses" value="jugueteria">
+                        <label>Juguetería</label>
+                    </div> 
+                    <div class="opciones-intereses">   
+                        <input type="checkbox" name="intereses" value="vida-sana">
+                        <label>Vida sana</label>
+                    </div> 
+                </span>
+
+                <!--No pongo la foto de usuario como required porque no considero que deba ser
+                un campo mandatorio en el formulario de registro-->
+                <label class="preguntas-formulario">Foto de Usuario: 
+                    <input type="file" name="nombre"></input>
+                </label>
+
+                <label class="preguntas-formulario">Contraseña: 
+                    <input type="password" name="nombre" required></input>
+                </label>
+
+                <label class="preguntas-formulario">Confirmar Contraseña: 
+                    <input type="password" name="nombre" required></input>
+                </label>
+
+                <button type="reset"> Borrar Todo </button>
+                
+                <button type="submit"> Enviar </button>
+
+            </fieldset>
+        </form>
+    </main> 
+
+    <!--FOOTER-->
+    <footer>
+        <div class="flex-footer">
+            <article class="footer-item">
+                <div class='icono'><i class="fas fa-credit-card"></i></div>
+                <h2>Pagá con tarjeta o en efectivo</h2>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos 
+                    de pago. ¡Y siempre es seguro!</p>
+            </article>
+            
+            <article class="footer-item">
+                <div class='icono'><i class="fas fa-gift"></i></div>
+                <h2>Envío gratis desde $ 2.500</h2>
+                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                    productos. Es un beneficio de Mercado Puntos.</p>
+            </article>
+            
+            <article class="footer-item">
+                <div class='icono'><i class="fas fa-user-shield"></i></div>
+                <h2>Seguridad, de principio a fin</h2>
+                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+                    porque estás siempre protegid@.</p>
+            </article>
+        </div>
+
+        <article>
+            <p>Copyright © 1999-2020 MercadoLiebre S.R.L.<p>
+        </article>
+
+    </footer>
+
+</body>
+</html>

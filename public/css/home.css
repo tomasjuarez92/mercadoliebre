@@ -1,0 +1,196 @@
+/* Paleta de Colores*/
+/*Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;*/
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:#ebebeb;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+/*------------MAIN------------------*/
+.main{
+    width: 90vw;
+    margin: auto;
+}
+
+.titular{
+    font-size: 24px;
+    color: #666;
+}
+
+/*Clase donde pongo estilos para todos los detalles de cada producto (precio, descuento, etc)*/
+.producto{
+    background-color: white;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border-top: 1px solid #ebebeb;
+    padding: 12px;
+    position: relative;
+    transition: box-shadow 450ms;
+    }
+
+.producto:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+/*Clase para los estilos de la imagen de cada articulo*/
+.articulo{
+    width: 90vw;
+    margin: auto;
+}
+
+main section article i{
+    display: block;
+    font-size:16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 10%;
+    margin-top: -30px;
+    /*transition: all 450ms;*/
+    animation-name: truck;
+    animation-duration: 900ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/*main section article i:hover{
+    font-size:20px;
+    width: 35px;
+    height: 35px;
+    color: #1259c3;
+    border: 1px solid #1259c3;
+}*/
+
+@keyframes truck {
+    0%{
+        font-size:16px;
+        width: 30px;
+        height: 30px;
+        color: #39b54a;
+        border: 1px solid #39b54a;
+    }
+
+    100%{
+        font-size:18px;
+        width: 32px;
+        height: 32px;
+        color: #03264C;
+        border: 1px solid #03264C;
+    }
+}
+
+.precio{
+    font-size: 14px;
+    margin-bottom: 3px;
+    width: 30%;
+    line-height: 25px;
+}
+
+.descuento{
+    font-size: 12px;
+    color: #39b54a;
+    width: 70%;
+    line-height: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.descripcion{
+    display: none;
+    /*text-decoration: none;
+    color: transparent;*/
+}
+
+.producto:hover > .descripcion {
+    font-size: 12px;
+    color: #666;
+    display: block;
+}
+
+.lista-articulos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*----------MEDIA QUERIES------------*/
+/*-----Mobile-------*/
+/* Mobile sera cualquier dispositivo con ancho hasta 360 px*/
+/*Todas las reglas de estilo de arriba corresponden a Mobile porque esta pensado en Mobile First*/
+
+/*-----Tablets-------*/
+@media (min-width: 361px) {
+    /*--------MAIN--------*/
+    h2{
+        margin: 15px 8px;
+    }
+
+    /*En las consignas de animaciones piden que la descripcion no se vea salvo que pasemos el
+    mouse por encima. Aplico esta logica para todas las resoluciones de dispositivos por que 
+    la consigna no lo especifica */
+    /*.descripcion{
+        font-size: 12px;
+        color: #666;
+        display: block;
+    }*/
+    
+    .producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 40vw;
+    }
+
+    .articulo{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 40vw;
+    }
+
+    .precio{
+        font-size:12px;
+        font-weight: bold;
+    }
+
+    .descuento{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .lista-articulos{
+        justify-content: space-around;
+    }
+}
+
+/*-----Desktop--------*/
+@media (min-width: 767px) {
+    /*--------MAIN--------*/
+    .producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 20vw;
+    }
+
+    .articulo{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 20vw;
+    }
+    
+}
